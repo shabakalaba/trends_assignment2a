@@ -4,4 +4,5 @@ export class War {
     startDate: Date;
     endDate: Date;
     stillGoing: boolean;
+    imagePath: string;
 }

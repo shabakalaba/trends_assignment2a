@@ -3,13 +3,13 @@
 <div id="wars">
   <ul>
     <li *ngFor="let w of wars" id="{{w.id}}" (click)="setWar(w)" [class.selected]="w===war">
-      {{w.name}}
+      <img src="{{ w.imagePath}}" alt="Picture from the {{ w.name }}" />
     </li>
   </ul>
 </div>
 
 <div *ngIf="war" id="{{war.id}}">
   <h2>{{ war.name }}</h2>
-  <p>Years at War: {{ war.startDate }} to {{ war.endDate }}</p>
+  <p>Years at War: {{ war.startDate.getFullYear() }} to {{ war.endDate.getFullYear() }}</p>
   <p>War still going: {{ war.stillGoing }}</p>
 </div>
