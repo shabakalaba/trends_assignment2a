@@ -2,12 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+
 import { CountriesComponent } from './countries/countries.component';
+import { WarlistComponent } from './warlist/warlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CountriesComponent
+    CountriesComponent,
+    WarlistComponent
   ],
   imports: [
     BrowserModule
