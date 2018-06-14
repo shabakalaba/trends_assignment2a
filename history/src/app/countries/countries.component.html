@@ -6,12 +6,17 @@
         id="{{ c.id }}" 
         (click)="setCountry(c)"
         [class.selected]="c===country">
-      {{ c.name }}
-    </li> <!-- *ngFor starts a for loop, = the let statement -->
+      <img src="{{c.image}}" alt="flag of {{c.name}}" />
+      <p>{{ c.name }}</p>
+    </li>
   </ul>
 </div>
 
-<div *ngIf="country" id="{{ country.id }}"> <!-- *ngif If planet exists, display the title -->
-  <h3>{{ country.name }}</h3>
-  Still a country: {{ country.stillACountry }}
+<div *ngIf="country" id="{{ country.id }}">
+  <div>
+    <h3>{{ country.name }}</h3>
+    <img class="large-flag" src="{{country.image}}" alt="flag of {{country.name}}" />
+    <p>Still a Country: {{ country.stillACountry }}</p>
+    <p>Date Established: {{country.established}}</p>
+  </div>
 </div>
