@@ -1,3 +1,17 @@
-<p>
-  countries works!
-</p>
+<h2>Countries</h2>
+
+<div id="countries">
+  <ul>
+    <li *ngFor="let c of countries" 
+        id="{{ c.id }}" 
+        (click)="setCountry(c)"
+        [class.selected]="c===country">
+      {{ c.name }}
+    </li> <!-- *ngFor starts a for loop, = the let statement -->
+  </ul>
+</div>
+
+<div *ngIf="country" id="{{ country.id }}"> <!-- *ngif If planet exists, display the title -->
+  <h3>{{ country.name }}</h3>
+  Still a country: {{ country.stillACountry }}
+</div>
