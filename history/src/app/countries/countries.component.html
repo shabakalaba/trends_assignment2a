@@ -1,5 +1,9 @@
 <h2>Countries</h2>
 
+<ul *ngIf='single'>
+  The only country I've ever travelled to is {{ single.name }}
+</ul>
+
 <div id="countries">
   <ul>
     <li *ngFor="let c of countries" 
@@ -20,3 +24,4 @@
     <p>Date Established: {{country.established}}</p>
   </div>
 </div>
+
