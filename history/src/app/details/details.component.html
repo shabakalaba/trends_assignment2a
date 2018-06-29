@@ -1,0 +1,18 @@
+<h1>Wars</h1>
+<i>Click the following for more information: </i>
+<div id="countries">
+    <ul>
+      <li *ngFor="let c of countries" 
+          id="{{ c.id }}" >
+        <p>{{ c.name }}</p>
+      </li>
+    </ul>
+</div>
+
+<i>Notable War to Mention:</i>
+<ul *ngIf='single'>
+    name: {{ single.name }}
+    start date: {{ single.startDate }} 
+    end date: {{ single.endDate }}
+    War still going: {{ single.stillGoing }}
+</ul>
